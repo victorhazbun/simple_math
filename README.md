@@ -44,14 +44,14 @@ But you can also do this, which is very cool
 object = Struct.new(:operation, :number) }
 objects =
   [
-    sample.new(:+, 3),
-    sample.new(:-, 2),
-    sample.new(:*, 4),
-    sample.new(:/, 2)
+    object.new(:+, 3),
+    object.new(:-, 2),
+    object.new(:*, 4),
+    object.new(:/, 2)
   ]
 result = SimpleMath::Calculator.run(start: 5) do |dc|
-  samples.each do |s|
-    dc[s.operation][s.number]
+  objects.each do |o|
+    dc[o.operation][o.number]
   end
 end
 
