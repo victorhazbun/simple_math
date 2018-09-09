@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/victorhazbun/simple_math.svg?style=svg)](https://circleci.com/gh/victorhazbun/simple_math) [![Coverage Status](https://coveralls.io/repos/github/victorhazbun/simple_math/badge.svg?branch=master)](https://coveralls.io/github/victorhazbun/simple_math?branch=master)
+[![CircleCI](https://circleci.com/gh/victorhazbun/simple_math.svg?style=svg)](https://circleci.com/gh/victorhazbun/simple_math) [![Coverage Status](https://coveralls.io/repos/github/victorhazbun/simple_math/badge.svg?branch=master)](https://coveralls.io/github/victorhazbun/simple_math?branch=master) [![Gem Version](https://badge.fury.io/rb/simple_math.svg)](https://badge.fury.io/rb/simple_math)
 # SimpleMath
 
 A simple math gem which provides a set of tools for math operations,
