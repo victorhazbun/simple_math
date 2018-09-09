@@ -58,7 +58,7 @@ end
 p result #=> 12.0
 ```
 
-The `+start+` argument is completely optional and by defauly is `0`
+The `+start+` argument is completely optional and by default is `0`
 
 ```ruby
 result = SimpleMath::Calculator.run do |h|
