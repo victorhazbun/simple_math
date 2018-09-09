@@ -27,7 +27,7 @@ Or install it yourself as:
 
 The following will resolve ((((5 + 3) - 2) * 4) / 2)
 
-```
+```ruby
 result = SimpleMath::Calculator.run(start: 5) do |dc|
   dc[:+][3]
   dc[:-][2]
@@ -40,7 +40,7 @@ p result #=> 12.0
 
 But you can also do this, which is very cool
 
-```
+```ruby
 object = Struct.new(:operation, :number) }
 objects =
   [
@@ -60,7 +60,7 @@ p result #=> 12.0
 
 The `+start+` argument is completely optional and by defauly is `0`
 
-```
+```ruby
 result = SimpleMath::Calculator.run do |h|
   h[:+][3]
 end
