@@ -1,9 +1,9 @@
 [![CircleCI](https://circleci.com/gh/victorhazbun/simple_math.svg?style=svg)](https://circleci.com/gh/victorhazbun/simple_math) [![Coverage Status](https://coveralls.io/repos/github/victorhazbun/simple_math/badge.svg?branch=master)](https://coveralls.io/github/victorhazbun/simple_math?branch=master)
 # SimpleMath
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simple_math`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple math gem which provides a set of tools for math operations, 
+currently you can play with a very basic calculator.
+See the [TODO](#todo) section for nice to have features.
 
 ## Installation
 
@@ -23,7 +23,56 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Multiple operations
+
+The following will resolve ((((5 + 3) - 2) * 4) / 2)
+
+```
+result = SimpleMath::Calculator.run(start: 5) do |dc|
+  dc[:+][3]
+  dc[:-][2]
+  dc[:*][4]
+  dc[:/][2]
+end
+
+p result #=> 12.0
+```
+
+But you can also do this, which is very cool
+
+```
+object = Struct.new(:operation, :number) }
+objects =
+  [
+    sample.new(:+, 3),
+    sample.new(:-, 2),
+    sample.new(:*, 4),
+    sample.new(:/, 2)
+  ]
+result = SimpleMath::Calculator.run(start: 5) do |dc|
+  samples.each do |s|
+    dc[s.operation][s.number]
+  end
+end
+
+p result #=> 12.0
+```
+
+The `+start+` argument is completely optional and by defauly is `0`
+
+```
+result = SimpleMath::Calculator.run do |h|
+  h[:+][3]
+end
+
+p result #=> 3
+```
+
+## TODO
+
+- Implement more basic functions to the calculator
+- Implement complex math operations
+- Refactor the DSL so Rubocop does not complains about big `&blocks`
 
 ## Development
 
@@ -33,7 +82,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/simple_math. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[username]/simple_math. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -41,4 +90,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the SimpleMath project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/simple_math/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the SimpleMath project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[username]/simple_math/blob/master/CODE_OF_CONDUCT.md).
+
+[username]: victorhazbun
