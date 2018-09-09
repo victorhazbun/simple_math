@@ -1,5 +1,7 @@
 require 'bundler/setup'
 require 'simple_math'
+require 'coveralls'
+Coveralls.wear!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
