@@ -30,7 +30,6 @@ RSpec.describe SimpleMath::Calculator do
     end
 
     context 'multiple operations' do
-
       context 'run with +start+ argument example' do
         it 'resolves ((((5 + 3) - 2) * 4) / 2)' do
           result = described_class.run(start: 5) do |dc|
