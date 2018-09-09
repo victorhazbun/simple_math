@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require 'byebug'
+
 RSpec.describe SimpleMath::Calculator do
   context '.run' do
     context 'single operations' do
