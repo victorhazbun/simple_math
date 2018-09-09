@@ -1,7 +1,7 @@
 [![CircleCI](https://circleci.com/gh/victorhazbun/simple_math.svg?style=svg)](https://circleci.com/gh/victorhazbun/simple_math) [![Coverage Status](https://coveralls.io/repos/github/victorhazbun/simple_math/badge.svg?branch=master)](https://coveralls.io/github/victorhazbun/simple_math?branch=master)
 # SimpleMath
 
-A simple math gem which provides a set of tools for math operations, 
+A simple math gem which provides a set of tools for math operations,
 currently you can play with a very basic calculator.
 See the [TODO](#todo) section for nice to have features.
 
@@ -23,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-### Multiple operations
+### Calculator
 
 The following will resolve ((((5 + 3) - 2) * 4) / 2)
 
@@ -70,7 +70,7 @@ p result #=> 3
 
 ## TODO
 
-- Implement more basic functions to the calculator
+- Implement more basic functions to the `Calculator`
 - Implement complex math operations
 - Refactor the DSL so Rubocop does not complains about big `&blocks`
 
