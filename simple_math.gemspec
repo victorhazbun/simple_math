@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.version       = SimpleMath::VERSION
   spec.authors       = ['victorhazbun']
   spec.email         = ['victorhazbun87@gmail.com']
-  spec.summary       = ''
-  spec.description   = ''
-  spec.homepage      = ''
+  spec.summary       = 'Simple math tools'
+  spec.description   = 'A simple math gem which provides a set of tools for math operations.'
+  spec.homepage      = 'https://github.com/victorhazbun/simple_math'
   spec.license       = 'MIT'
 
   if spec.respond_to?(:metadata)
