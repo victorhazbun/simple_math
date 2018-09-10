@@ -70,6 +70,7 @@ p result #=> 3
 
 ## TODO
 
+- Document methods, explaning how to write DSLs like this one
 - Implement more basic functions to the `Calculator`
 - Implement complex math operations
 - Refactor the DSL so Rubocop does not complains about big `&blocks`
